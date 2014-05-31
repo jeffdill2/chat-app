@@ -1,14 +1,51 @@
-/* global describe, it */
-
 (function () {
-    'use strict';
+	'use strict';
 
-    describe('Give it some context', function () {
-        describe('maybe a bit more context here', function () {
-            it('should run here few assertions', function () {
-              var answer = 2;
-              expect(2).to.equal(answer);
-            });
-        });
-    });
+	describe('Chat Atcha -- the supreme messaging application', function () {
+		describe('Message Constructor', function () {
+			it('should receive a single parameter as a string', function () {
+				var badFunctionCall = function() {
+					var objMessage = new Message([]);
+				};
+
+				expect(badFunctionCall).to.throw(Error);
+			});
+
+			it('should require the string parameter to not be empty', function() {
+				var badFunctionCall = function() {
+					var objMessage = new Message('');
+				};
+
+				expect(badFunctionCall).to.throw(Error);
+			});
+		});
+
+		describe('User Constructor', function() {
+			it('should require a single parameter as a string', function() {
+				var badFunctionCall = function() {
+					var objUser = new User([]);
+				};
+
+				expect(badFunctionCall).to.throw(Error);
+			});
+
+			it('should require the string to be two characters in length', function() {
+				var badFunctionCall = function() {
+					var objUser = new User('123');
+				};
+
+				expect(badFunctionCall).to.throw(Error);
+			});
+		});
+
+		describe('User Interface', function() {
+			it('should require user initials before enabling the message box', function() {
+
+			});
+
+			it('should require user initials before enabling the send button', function() {
+
+			});
+		});
+	});
 })();

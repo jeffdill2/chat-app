@@ -1,6 +1,10 @@
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////// INHERITED STUFFS
+////////////////////////////////////////////////////////////
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'variables';
 
 .browsehappy {
     margin: 0.2em 0;
@@ -9,83 +13,112 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////// TAGS
+////////////////////////////////////////////////////////////
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: $colorMidnightGray;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+////////////////////////////////////////////////////////////
+///////////////////////////////////////////////// CONTAINERS
+////////////////////////////////////////////////////////////
+#footer {
+    background-color: $colorBurntOrange;
+    height: 90px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
-    }
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
+#login-box {
+    font-family: Helvetica, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bolder;
+    color: $colorMidnightGray;
+    width: 500px;
+    height: 300px;
+    background-color: $colorBurntOrange;
+    margin: 0 auto;
+    margin-top: 120px;
     text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
+    padding-top: 40px;
+}
+
+#user-initials-box {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    width: 100px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    text-align: center;
+    outline: none;
+}
+
+#message-box {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    width: 1300px;
+    max-width: 70%;
+    height: 60px;
+    margin-top: 15px;
+    margin-left: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: absolute;
+    outline: none;
+}
+
+.button {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: $colorLightGray;
+    border-radius: 8px;
+    border: 2px solid $colorStoneGray;
+    line-height: 60px;
+    text-align: center;
+    color: $colorMidnightGray;
+    text-shadow: -1px -1px 1px $colorWhite;
+    margin-top: 15px;
+    width: 160px;
+    height: 60px;
+    box-shadow: inset   1px -2px 1px $colorLightGray,
+                        3px 3px  3px $colorStoneGray;
+
+    &:hover {
+        box-shadow: inset   2px -2px 2px $colorLightGray,
+                            2px 2px  2px $colorMidnightGray;
+        -webkit-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    &:active {
+        margin-top: 16px;
+        margin-bottom: -16px;
+        box-shadow: inset   2px -2px 2px $colorLightGray,
+                            1px 1px  1px $colorMidnightGray;
     }
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
+#send-button {
+    @extend .button;
+
+    margin-right: 100px;
+    float: right;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
+#login-button {
+    @extend .button;
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,9 +1,10 @@
 {
-  "name": "junkjunk",
+  "name": "ChatAtcha",
   "private": true,
   "dependencies": {
     "sass-bootstrap": "~3.0.0",
     "modernizr": "~2.6.2",
+    "underscore": "~1.6.0",
     "jquery": "~1.10.2"
   },
   "devDependencies": {}

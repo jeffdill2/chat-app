@@ -23,7 +23,8 @@
 		describe('User Constructor', function() {
 			it('should require a single parameter as a string', function() {
 				var badFunctionCall = function() {
-					var objUser = new User([]);
+					var objUser = new User();
+					objUser.setInitials([]);
 				};
 
 				expect(badFunctionCall).to.throw(Error);
@@ -31,7 +32,8 @@
 
 			it('should require the string to be two characters in length', function() {
 				var badFunctionCall = function() {
-					var objUser = new User('123');
+					var objUser = new User();
+					objUser.setInitials('123');
 				};
 
 				expect(badFunctionCall).to.throw(Error);

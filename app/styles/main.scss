@@ -7,17 +7,26 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'variables';
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
 }
 
 ////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////// TAGS
 ////////////////////////////////////////////////////////////
 body {
-    background-color: $colorMidnightGray;
+	background-color: $colorMidnightGray;
+}
+
+html * {
+	vertical-align: top;
+}
+
+input[type=checkbox] {
+	margin-top: 40px;
+	margin-right: 30px;
 }
 
 ////////////////////////////////////////////////////////////
@@ -29,7 +38,48 @@ body {
     left: 0px;
     right: 0px;
     bottom: 0px;
+    min-width: 1240px;
     position: fixed;
+}
+
+#footer-preferences {
+    font-family: Helvetica, sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: bolder;
+    color: $colorWhite;
+    background-color: $colorBurntOrange;
+    width: 350px;
+    height: 100px;
+    position: fixed;
+    left: 20px;
+    bottom: -10px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -60px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-color: transparent transparent $colorBurntOrange transparent;
+        border-style: solid;
+        border-width: 30px;
+    }
+
+    &:hover {
+        transition: all 0.25s ease;
+        bottom: 90px;
+    }
+
+    label {
+        cursor: pointer;
+        width: 350px;
+    }
 }
 
 #login-box {
@@ -60,12 +110,71 @@ body {
     outline: none;
 }
 
-#message-box {
+#messages-container {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.message-container {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    width: 1000px;
+    max-width: 70%;
+    min-height: 80px;
+    border-radius: 10px;
+    border: 5px solid $colorBlack;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: $colorWhite;
+}
+
+.time-container {
+    width: 250px;
+    height: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+    color: $colorStoneGray;
+    font-size: 12px;
+    text-align: right;
+    float: right;
+}
+
+.text-container {
+    width: 800px;
+    min-height: 80px;
+    color: $colorMidnightGray;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 20px;
+    display: inline;
+    position: absolute;
+}
+
+.user-container {
+    font-size: 14px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-top: 10px;
+    color: $colorWhite;
+    background-color: $colorBurntOrange;
+    display: inline-table;
+    text-align: center;
+}
+
+#message-input-box {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: bolder;
     width: 1300px;
+    min-width: 850px;
     max-width: 70%;
     height: 60px;
     margin-top: 15px;

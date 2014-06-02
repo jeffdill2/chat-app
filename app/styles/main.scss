@@ -32,202 +32,245 @@ input[type=checkbox] {
 ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////// CONTAINERS
 ////////////////////////////////////////////////////////////
+#logo {
+	position: fixed;
+	margin-left: 30px;
+	top: 10px;
+
+	img {
+		width: 100%;
+
+		@media (max-width: 1600px) {
+			width: 90%;
+		}
+
+		@media (max-width: 1540px) {
+			width: 80%;
+		}
+
+		@media (max-width: 1500px) {
+			width: 70%;
+		}
+
+		@media (max-width: 1430px) {
+			width: 60%;
+		}
+
+		@media (max-width: 1340px) {
+			width: 50%;
+		}
+
+		@media (max-width: 1100px) {
+			width: 40%;
+		}
+
+		@media (max-width: 940px) {
+			width: 30%;
+		}
+
+		@media (max-width: 780px) {
+			width: 20%;
+		}
+	}
+}
+
 #footer {
-    background-color: $colorBurntOrange;
-    height: 90px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    min-width: 1240px;
-    position: fixed;
+	background-color: $colorBurntOrange;
+	height: 90px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	min-width: 1240px;
+	position: fixed;
 }
 
 #footer-preferences {
-    font-family: Helvetica, sans-serif;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: bolder;
-    color: $colorWhite;
-    background-color: $colorBurntOrange;
-    width: 350px;
-    height: 100px;
-    position: fixed;
-    left: 20px;
-    bottom: -10px;
-    text-align: center;
-    line-height: 100px;
-    cursor: pointer;
+	font-family: Helvetica, sans-serif;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: bolder;
+	color: $colorWhite;
+	background-color: $colorBurntOrange;
+	width: 350px;
+	height: 100px;
+	position: fixed;
+	left: 20px;
+	bottom: -10px;
+	text-align: center;
+	line-height: 100px;
+	cursor: pointer;
 
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -60px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-color: transparent transparent $colorBurntOrange transparent;
-        border-style: solid;
-        border-width: 30px;
-    }
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -60px;
+		left: 40px;
+		width: 0;
+		height: 0;
+		border-color: transparent transparent $colorBurntOrange transparent;
+		border-style: solid;
+		border-width: 30px;
+	}
 
-    &:hover {
-        transition: all 0.25s ease;
-        bottom: 90px;
-    }
+	&:hover {
+		transition: all 0.25s ease;
+		bottom: 90px;
+	}
 
-    label {
-        cursor: pointer;
-        width: 350px;
-    }
+	label {
+		cursor: pointer;
+		width: 350px;
+	}
 }
 
 #login-box {
-    font-family: Helvetica, sans-serif;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: bolder;
-    color: $colorMidnightGray;
-    width: 500px;
-    height: 300px;
-    background-color: $colorBurntOrange;
-    margin: 0 auto;
-    margin-top: 120px;
-    text-align: center;
-    padding-top: 40px;
+	font-family: Helvetica, sans-serif;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: bolder;
+	color: $colorWhite;
+	width: 500px;
+	height: 300px;
+	background-color: $colorBurntOrange;
+	margin: 0 auto;
+	margin-top: 120px;
+	text-align: center;
+	padding-top: 40px;
 }
 
 #user-initials-box {
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: bolder;
-    width: 100px;
-    height: 60px;
-    margin-top: 15px;
-    margin-bottom: 35px;
-    text-align: center;
-    outline: none;
+	font-family: Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bolder;
+	width: 100px;
+	height: 60px;
+	margin-top: 15px;
+	margin-bottom: 35px;
+	text-align: center;
+	outline: none;
 }
 
 #messages-container {
-    margin-top: 20px;
-    margin-bottom: 100px;
+	margin-top: 20px;
+	margin-bottom: 100px;
 }
 
 .message-container {
-    font-family: Helvetica, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    width: 1000px;
-    max-width: 70%;
-    min-height: 80px;
-    border-radius: 10px;
-    border: 5px solid $colorBlack;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    background-color: $colorWhite;
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	width: 1000px;
+	max-width: 70%;
+	min-height: 80px;
+	border-radius: 10px;
+	border: 5px solid $colorBurntOrange;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: $colorWhite;
 }
 
 .time-container {
-    width: 250px;
-    height: 15px;
-    margin-top: 10px;
-    margin-right: 15px;
-    color: $colorStoneGray;
-    font-size: 12px;
-    text-align: right;
-    float: right;
+	width: 250px;
+	height: 15px;
+	margin-top: -20px;
+	margin-right: 10px;
+	color: $colorStoneGray;
+	font-size: 12px;
+	text-align: right;
+	float: right;
 }
 
 .text-container {
-    width: 800px;
-    min-height: 80px;
-    color: $colorMidnightGray;
-    padding-top: 23px;
-    padding-bottom: 23px;
-    padding-left: 20px;
-    display: inline;
-    position: absolute;
+	max-width: 780px;
+	min-height: 47px;
+	color: $colorMidnightGray;
+	margin-top: -46px;
+	padding-bottom: 28px;
+	padding-left: 100px;
+	word-wrap: break-word;
 }
 
 .user-container {
-    font-size: 14px;
-    font-weight: bold;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding-top: 10px;
-    color: $colorWhite;
-    background-color: $colorBurntOrange;
-    display: inline-table;
-    text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin-left: 10px;
+	margin-top: 5px;
+	padding-top: 25px;
+	color: $colorWhite;
+	background-color: $colorBurntOrange;
+	text-align: center;
+	line-height: 18px;
 }
 
 #message-input-box {
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: bolder;
-    width: 1300px;
-    min-width: 850px;
-    max-width: 70%;
-    height: 60px;
-    margin-top: 15px;
-    margin-left: 100px;
-    padding-left: 50px;
-    padding-right: 50px;
-    position: absolute;
-    outline: none;
+	font-family: Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bolder;
+	width: 1300px;
+	min-width: 850px;
+	max-width: 70%;
+	height: 60px;
+	margin-top: 15px;
+	margin-left: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+	position: absolute;
+	outline: none;
 }
 
 .button {
-    font-family: Helvetica, sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: bold;
-    background-color: $colorLightGray;
-    border-radius: 8px;
-    border: 2px solid $colorStoneGray;
-    line-height: 60px;
-    text-align: center;
-    color: $colorMidnightGray;
-    text-shadow: -1px -1px 1px $colorWhite;
-    margin-top: 15px;
-    width: 160px;
-    height: 60px;
-    box-shadow: inset   1px -2px 1px $colorLightGray,
-                        3px 3px  3px $colorStoneGray;
+	font-family: Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	background-color: $colorLightGray;
+	border-radius: 8px;
+	border: 2px solid $colorStoneGray;
+	line-height: 60px;
+	text-align: center;
+	color: $colorMidnightGray;
+	text-shadow: -1px -1px 1px $colorWhite;
+	margin-top: 15px;
+	width: 160px;
+	height: 60px;
+	box-shadow: inset	1px -2px 1px $colorLightGray,
+						3px 3px  3px $colorStoneGray;
 
-    &:hover {
-        box-shadow: inset   2px -2px 2px $colorLightGray,
-                            2px 2px  2px $colorMidnightGray;
-        -webkit-transition: all .2s ease;
-        transition: all .2s ease;
-    }
+	&:hover {
+		box-shadow: inset	2px -2px 2px $colorLightGray,
+							2px 2px  2px $colorMidnightGray;
+		-webkit-transition: all .2s ease;
+		transition: all .2s ease;
+	}
 
-    &:active {
-        margin-top: 16px;
-        margin-bottom: -16px;
-        box-shadow: inset   2px -2px 2px $colorLightGray,
-                            1px 1px  1px $colorMidnightGray;
+	&:active {
+		margin-top: 16px;
+		margin-bottom: -16px;
+		box-shadow: inset	2px -2px 2px $colorLightGray,
+							1px 1px  1px $colorMidnightGray;
     }
 }
 
 #send-button {
-    @extend .button;
+	@extend .button;
 
-    margin-right: 100px;
-    float: right;
+	margin-right: 100px;
+	float: right;
 }
 
 #login-button {
-    @extend .button;
+	@extend .button;
 
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -4,7 +4,7 @@
 $(document).ready(function() {
 	$('#message-input-box').prop('disabled', true);
 	$('#send-button').prop('disabled', true);
-	$('#auto-refresh').prop('checked', true);
+	$('#auto-scroll').prop('checked', true);
 
 	$('#user-initials-box').focus();
 });
@@ -79,6 +79,8 @@ function messageLoader() {
 	retrieveData(strChatMessagesURL).done(function(data) {
 		data.forEach(function(objMessage) {
 			if (verifyMessages(objMessage)) {
+				objMessage.time = moment(parseInt(objMessage.time)).format("MMMM Do YYYY, hh:mm a");
+
 				renderMessages(objMessage);
 			}
 
@@ -95,6 +97,8 @@ function messageLoader() {
 			data.forEach(function(objMessage) {
 				if (bolNewMessages) {
 					if (verifyMessages(objMessage)) {
+						objMessage.time = moment(parseInt(objMessage.time)).format("MMMM Do YYYY, hh:mm a");
+
 						renderMessages(objMessage);
 					}
 
@@ -148,7 +152,7 @@ function postMessage(objMessage) {
 }
 
 function bolAutoRefresh() {
-	if ($('#auto-refresh').prop('checked')) {
+	if ($('#auto-scroll').prop('checked')) {
 		return true;
 	} else {
 		return false;

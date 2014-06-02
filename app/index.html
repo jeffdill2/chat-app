@@ -29,6 +29,10 @@
         <!--////////////////////////////////////////////////////////
         //////////////////////////////////// BEGIN USER CREATED HTML
         /////////////////////////////////////////////////////////-->
+        <div id="logo">
+            <img src="../images/logo.png">
+        </div>
+
         <div id="login-box">
             Enter Your Initials:
 
@@ -43,7 +47,7 @@
 
         <div id="footer-preferences">
             <form>
-                <label><input type="checkbox" id="auto-refresh"></input>Auto-Refresh?</label>
+                <label><input type="checkbox" id="auto-scroll"></input>Auto-Scroll?</label>
             </form>
         </div>
 
@@ -66,7 +70,7 @@
                 </div>
                 
                 <div class="time-container">
-                    <%= moment(parseInt(time)).format("dddd, MMMM Do YYYY, h:mm:ss a") %>
+                    <%= time %>
                 </div>
             </div>
         </script>

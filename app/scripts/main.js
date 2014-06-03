@@ -53,10 +53,9 @@ function User() {
 				break;
 
 			default:
+				this.initials = strInitials.toUpperCase();
 				break;
 		}
-
-		this.initials = strInitials.toUpperCase();
 	};
 
 	this.getInitials = function() {
